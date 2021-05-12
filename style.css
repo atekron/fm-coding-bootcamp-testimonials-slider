@@ -1,0 +1,84 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  background: url("/images/pattern-curve.svg");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: auto 10%;
+}
+
+.container {
+  margin: auto;
+  display: flex;
+  max-width: 768px;
+  min-width: 375px;
+}
+
+.slider-navigation {
+  background-color: white;
+  padding: 0.5rem;
+  display: block;
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-first {
+  background-color: transparent;
+}
+
+.card-second {
+  display: none;
+}
+
+.card__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  background: url("/images/pattern-bg.svg");
+  background-position: left 50% top;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  padding: 2rem;
+}
+
+.card__image img {
+  display: block;
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.card__quote {
+  background: url("/images/pattern-quotes.svg") left 50% top no-repeat;
+  background-size: 4rem auto;
+  margin-top: 2rem;
+  max-width: 80%;
+  min-width: 300px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media screen and(min-width: 768px) {
+}
