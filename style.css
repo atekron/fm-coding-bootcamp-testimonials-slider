@@ -41,20 +41,19 @@ body {
   align-items: center;
 }
 
-.card-first {
+/* .card-first {
   background-color: transparent;
 }
 
 .card-second {
   display: none;
-}
+} */
 
 .card__image {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  position: relative;
   background: url("/images/pattern-bg.svg");
   background-position: left 50% top;
   background-repeat: no-repeat;
@@ -83,9 +82,15 @@ nav button {
   height: 100%;
 }
 
-nav button:hover {
+nav button:hover:enabled {
   background-color: var(--grayish-blue);
+  cursor: pointer;
+  box-shadow: 0 0 2rem white;
 }
+
+/* nav button:disabled {
+  background-color: var(--grayish-blue);
+} */
 
 .prev {
   border-radius: 2rem 0 0 2rem;
