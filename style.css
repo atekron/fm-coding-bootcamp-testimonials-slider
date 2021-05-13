@@ -85,7 +85,6 @@ nav button {
 nav button:hover:enabled {
   background-color: var(--grayish-blue);
   cursor: pointer;
-  box-shadow: 0 0 2rem white;
 }
 
 /* nav button:disabled {
@@ -123,5 +122,66 @@ nav button:hover:enabled {
   font-weight: 500;
 }
 
-@media screen and(min-width: 768px) {
+@media screen and (min-width: 1440px) {
+  body {
+    background-size: auto 20%;
+  }
+
+  .container {
+    margin: auto;
+    display: flex;
+    max-width: 1440px;
+    min-width: 1080px;
+  }
+
+  .card {
+    all: unset;
+    max-width: 100rem;
+    height: 40rem;
+    display: grid;
+    grid-template-columns: 20% 20% 60%;
+    grid-template-rows: 1fr 3fr 0.5fr 0.5fr 1fr;
+    grid-template-areas:
+      ". . i"
+      "q q i"
+      "a j i"
+      ". n i"
+      ". . i";
+  }
+  .card__image {
+    grid-area: i;
+    padding: 4rem;
+  }
+
+  nav {
+    all: unset;
+    grid-area: n;
+    position: relative;
+    bottom: -4rem;
+    right: -33.5rem;
+  }
+
+  .card__quote {
+    /* background-color: burlywood; */
+    grid-area: q;
+    background: url("/images/pattern-quotes.svg") left 30% top no-repeat;
+    background-size: 7rem auto;
+    margin: 2rem;
+    margin-left: 9rem;
+    padding-bottom: 2rem;
+    font-size: 1.8rem;
+    /* max-height: 40vh; */
+    min-width: 40rem;
+  }
+
+  .card__author {
+    grid-area: a;
+    margin-left: 9rem;
+    align-self: baseline;
+  }
+
+  .card__author-position {
+    grid-area: j;
+    align-self: baseline;
+  }
 }
